@@ -181,48 +181,15 @@
 
 
 <body>
-    <div class="container">
-        <h1>Order Details</h1>
-        <p>Product: <span id="product-name"></span></p>
-        <p class="price">Price: P<span id="product-price"></span></p>
-        <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" value="1" min="1" onchange="calculateTotal()">
-        <p class="total">Total: P<span id="total-price"></span></p>
-        <form action="thankyou.html" method="GET">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <label for="address">Delivery Address:</label>
-            <textarea id="address" name="address" rows="4" placeholder="Your Address" required></textarea>
-            <input type="hidden" name="product" id="product-hidden">
-            <input type="hidden" name="price" id="price-hidden">
-            <input type="hidden" name="quantity" id="quantity-hidden">
-            <input type="hidden" name="total" id="total-hidden">
-            <button type="submit" class="cart-btn" onclick="prepareForm()">Submit Order</button>
+   <div class="contact-content">
+      
+        <form action="thanks.html" method="GET">
+                 <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
     </div>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const productName = urlParams.get('product');
-        const productPrice = urlParams.get('price');
-
-        // Display product and price
-        document.getElementById('product-name').textContent = productName;
-        document.getElementById('product-price').textContent = productPrice;
-        document.getElementById('total-price').textContent = productPrice;
-
-        function calculateTotal() {
-            const quantity = document.getElementById('quantity').value;
-            document.getElementById('total-price').textContent = quantity * productPrice;
-        }
-
-        function prepareForm() {
-            document.getElementById('product-hidden').value = productName;
-            document.getElementById('price-hidden').value = productPrice;
-            document.getElementById('quantity-hidden').value = document.getElementById('quantity').value;
-            document.getElementById('total-hidden').value = document.getElementById('total-price').textContent;
-        }
-    </script>
+  
 </body>
 </html>
