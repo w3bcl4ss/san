@@ -4,192 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Now</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-        font-family: 'Dancing Script', cursive;
-        background-image: url(Bcakground\ Image\ 6.jpg);
-        margin: 0;
-        padding: 0;
-        color: white;
+      font-family: 'Roboto', sans-serif;
+            color: #f7f5f5;
+        line-height: 1.6;
+        background-image: url('img/b.avif');
         background-size: cover;
-    }
-    
-    /* Navigation Bar */
-    nav {
+        background-position: center;
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+        flex-direction: column;
         justify-content: space-between;
-        background-color: black;
-        background-size: cover;
-        padding: 15px 15px;
     }
 
-    .logo img {
-        width: 150px;
-        height: 60px;
-        margin-right: 10px;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .nav-menu {
+        /* Header Styling */
+        header {
+        background: linear-gradient(135deg, #1e1e1e, #ff6600);
+        color: #fff;
+        padding: 15px 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
         display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        flex-direction: row;
-    }
-
-    .nav-icon {
-        width: 25px;
-        height: 25px;
-        margin-right: 0px;
-        display: flex;
-    }
-
-    .nav-menu li {
-        margin: 0px 0;
-    }
-
-    .nav-menu a {
-        text-decoration: none;
-        color: rgb(247, 167, 19);
-        font-size: 1.5em;
-        display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 10px;
-        transition: color 0.3s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s ease;
     }
 
-    .nav-menu a:hover {
-        color: rgba(245, 254, 254, 0.012);
+    header .logo h1 {
+        font-size: 0.8em;
+        margin: 0;
     }
 
-    .nav-menu img {
-        width: 20px;
-        height: 20px;
-        border-radius: 5px;
-    }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
 
-    .container {
-        max-width: 600px;
-        margin: 80px auto;
-        padding: 20px;
-        background-color: rgba(44, 59, 74, 0.815);
-        color: black;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
 
-    h1 {
-        text-align: center;
-    }
+        nav a:hover,
+        nav a.active {
+            background: #ff6600;
+            border-radius: 5px;
+        }
 
-    label {
-        display: block;
-        margin-top: 10px;
-        font-size: larger;
-        font-weight: bold;
-    }
+        /* Contact Section */
+        section.contact-section {
+            padding: 120px 20px 60px;
+            text-align: center;
+            flex: 1;
+        }
 
-    p {
-        font-size: larger;
-        font-weight: bold;
-    }
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff6600;
+        }
 
-    input,
-    textarea {
-        width: 95%;
-        padding: 10px;
-        margin: 5px 0 20px;
-        border: 1px solid gray;
-        border-radius: 5px;
-    }
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-    .price {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-    }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
 
-    .total {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-    }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #ff6600;
+            outline: none;
+        }
 
-    .cart-btn {
-        display: inline-block;
-        width: 95%;
-        padding: 10px 20px;
-        background-color: orange;
-        color: black;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-    }
+        .contact-form button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
 
-    .cart-btn:hover {
-        background-color: rgba(212, 143, 13, 0.765);
-    }
-</style>
+        .contact-form button:hover {
+            background-color: #e55c00;
+        }
 
+        /* Footer */
+        footer {
+            background: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #ff6600;
+            margin: 0 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+        header {
+            padding: 10px;
+        }
+
+        nav a {
+            padding: 10px 20px;
+            font-size: 0.5rem;
+            }
+
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 0.9rem;
+            }
+        }
+
+       
+        @media (max-width: 480px) {
+        nav a {
+            margin: 5px 0;
+            padding: 8px 15px;
+            font-size: 0.5rem;
+        }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .contact-form button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
- <!-- Navigation Bar -->
- <nav>
-    <a href="#" class="logo">
-        <img src="craftlogo.png" alt="Craft Tree Logo">
-    
-    </a>
-    <ul class="nav-menu">
-        <li><a href="index.html"><img src="Home.jpg" alt="Home Icon"> Home</a></li>
-        <li><a href="about.html"><img src="bell icon.jpg" class="active" alt="About Icon"> About</a></li>
-        <li><a href="contact.html"><img src="callicon.jpg" alt="Contact Icon Icon"> Contact</a></li>
-        <li><a href="products.html"><img src="Products.jpg" alt="Products Icon"> Products</a></li>
-    </ul>
-</nav>
 <body>
-    <div class="container">
-        <h1>Order Details</h1>
-        <p>Product: <span id="product-name"></span></p>
-        <p class="price">Price: P<span id="product-price"></span></p>
-        <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" value="1" min="1" onchange="calculateTotal()">
-        <p class="total">Total: P<span id="total-price"></span></p>
-        <form action="thanks.html" method="GET">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <label for="address">Delivery Address:</label>
-            <textarea id="address" name="address" rows="4" placeholder="Your Address" required></textarea>
-            <input type="hidden" name="product" id="product-hidden">
-            <input type="hidden" name="price" id="price-hidden">
-            <input type="hidden" name="quantity" id="quantity-hidden">
-            <input type="hidden" name="total" id="total-hidden">
-            <button type="submit" class="cart-btn" onclick="prepareForm()">Submit Order</button>
+
+<header>
+    <div class="logo">
+        <h1>MotorShop</h1>
+    </div>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="services.html"><i class="fas fa-cogs"></i> Services</a>
+        <a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+</header>
+
+<section class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-content">
+        <form class="contact-form" action="thanks.html" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
     </div>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const productName = urlParams.get('product');
-        const productPrice = urlParams.get('price');
+</section>
 
-        // Display product and price
-        document.getElementById('product-name').textContent = productName;
-        document.getElementById('product-price').textContent = productPrice;
-        document.getElementById('total-price').textContent = productPrice;
+<footer>
+    <p>&copy; 2024 MotorShop. All Rights Reserved.</p>
+    <p>Follow us on: 
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </p>
+</footer>
 
-        function calculateTotal() {
-            const quantity = document.getElementById('quantity').value;
-            document.getElementById('total-price').textContent = quantity * productPrice;
-        }
-
-        function prepareForm() {
-            document.getElementById('product-hidden').value = productName;
-            document.getElementById('price-hidden').value = productPrice;
-            document.getElementById('quantity-hidden').value = document.getElementById('quantity').value;
-            document.getElementById('total-hidden').value = document.getElementById('total-price').textContent;
-        }
-    </script>
 </body>
 </html>
