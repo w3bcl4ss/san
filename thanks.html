@@ -3,135 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Welcome to Edday Cafe, where we offer a cozy atmosphere with expertly crafted drinks and delicious meals. Discover your new favorite spot with us.">
+    <meta name="keywords" content="cafe, coffee, cuisine, Edday Cafe, restaurant, menu">
+    <title>Thank You - Edday Cafe</title>
     <style>
-        /* Reset and Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html, body {
-            height: 100%;
-            font-family: 'Roboto', sans-serif;
-            color: #f7f5f5;
-            line-height: 1.6;
-            background-image: url('img/b.avif');
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./img/pngtree-an-old-fashioned-cafe-with-tables-in-front-of-some-framed-picture-image_2468625.jpg');
             background-size: cover;
             background-position: center;
-            display: flex;
-            flex-direction: column;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
+            background-attachment: fixed;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1e1e1e, #ff6600);
-            color: #fff;
-            padding: 15px 20px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-        }
-        header .logo h1 {
-            font-size: 1rem;
-        }
         nav {
-            display: flex;
-            gap: 15px;
+            margin: 20px;
+            text-align: right;
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 10px;
         }
         nav a {
-            color: #fff;
-            padding: 10px;
+            margin: 0 15px;
+            color: #FC6;
+            text-decoration: none;
             font-weight: bold;
-            text-transform: uppercase;
-            transition: background 0.3s ease;
+            font-size: large;
         }
-        nav a:hover, nav a.active {
-            background: #ff6600;
-            border-radius: 5px;
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .nav-shadow {
+            box-shadow: 0 4px 6px rgba(136, 73, 1, 0.1);
+            background-color: rgba(136, 73, 1, 0.7); 
         }
 
-        /* Thank You Section */
-        section.thank-you-message {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 20px;
-        }
-        .thank-you-content {
+        .container {
             max-width: 600px;
+            margin: 150px auto 0;
+            padding: 40px;
             background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
             border-radius: 10px;
             text-align: center;
-        }
-        .thank-you-content h2 {
-            font-size: 2rem;
-            color: #ff6600;
-            margin-bottom: 15px;
-        }
-        .thank-you-content p {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            color: white;
         }
 
-        /* Footer */
-        footer {
-            background: #1e1e1e;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
+        h1 {
+            color: #FC6;
+            font-size: 2.5rem;
         }
-        footer a {
-            color: #ff6600;
-            margin: 0 5px;
+
+        .name {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #FC6;
+            font-size: 1.25rem;
+        }
+
+        p {
             font-size: 1.2rem;
+            margin-bottom: 20px;
         }
-        footer a:hover {
-            color: #fff;
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            margin-top: 50px;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                text-align: center;
+                padding: 10px 0;
+                position: static;
+                margin: 0;
+            }
+            nav a {
+                font-size: medium;
+                margin: 0 50px;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav a {
+                margin: 0 20px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-<header>
-    <div class="logo">
-        <h1>MotorShop</h1>
-    </div>
-    <nav>
-        <a href="index.html"><i class="fas fa-home" aria-label="Home"></i> Home</a>
-        <a href="about.html"><i class="fas fa-info-circle" aria-label="About"></i> About</a>
-        <a href="services.html"><i class="fas fa-cogs" aria-label="Services"></i> Services</a>
-        <a href="contact.html"><i class="fas fa-envelope" aria-label="Contact"></i> Contact</a>
+    <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
     </nav>
-</header>
 
-<section class="thank-you-message">
-    <div class="thank-you-content">
-        <h2>Thank You, <span id="sender-name"></span>!</h2>
-        <p>We appreciate you reaching out. Your message has been sent successfully.</p>
-        <p>We will respond to you as soon as possible!</p>
+    <div class="container">
+        <h1>Thank You!</h1>
+        <p>Thank you, <span class="name"><?= htmlspecialchars($_GET['name']); ?></span>! Your message has been submitted successfully.</p>
+        <a href="index.html">Return to Home</a>
     </div>
-</section>
 
-<footer>
-    <p>&copy; 2024 MotorShop. All Rights Reserved.</p>
-    <p>Follow us on: 
-        <a href="#"><i class="fab fa-facebook" aria-label="Facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
-    </p>
-</footer>
+    <footer>
+        <p>&copy; 2024 : Design By EDDAY. All rights reserved.</p>
+    </footer>
 
+    <script>
+        // Get the navigation element
+        const nav = document.getElementById('mainNav');
+
+        // Function to handle scroll event
+        function handleScroll() {
+            if (window.scrollY > 50) { // Adjust the value as needed
+                nav.classList.add('nav-shadow');
+            } else {
+                nav.classList.remove('nav-shadow');
+            }
+        }
+
+        // Listen for scroll events
+        window.addEventListener('scroll', handleScroll);
+    </script>
 </body>
 </html>
