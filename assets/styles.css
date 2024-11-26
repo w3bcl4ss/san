@@ -482,21 +482,36 @@ footer .social-icons a:hover {
     .nav-links {
         flex-direction: column;
         display: none;
-    }
-
-    .menu-toggle {
-        display: block;
+        background: #4CAF50;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        z-index: 1000;
     }
 
     .nav-links.show {
         display: flex;
-        background: #4CAF50;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
         position: absolute;
-        top: 60px;
+        top: 15px;
         right: 20px;
-        flex-direction: column;
-        width: 200px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1100;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
     .values-grid {
         grid-template-columns: 1fr;
