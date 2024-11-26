@@ -409,7 +409,7 @@ footer {
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
     .nav-links {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
         width: 100%;
         background: #4CAF50;
