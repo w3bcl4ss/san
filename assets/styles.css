@@ -69,14 +69,7 @@ header.scrolled .logo {
     color: #FFA500;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
+/* Removed menu-toggle styles */
 
 /* Hero Section */
 .hero {
@@ -318,6 +311,7 @@ footer {
 .cta .btn:hover {
     background: #e68a00;
 }
+
 /* About Section */
 .about {
     background: #fff;
@@ -366,6 +360,7 @@ footer {
 .about-text p {
     margin-bottom: 20px;
 }
+
 /* Core Values Section */
 .values {
     background: #f9f9f9;
@@ -376,210 +371,39 @@ footer {
 .values h2 {
     color: #4CAF50;
     margin-bottom: 40px;
-    font-size: 2.5em;
 }
 
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    max-width: 1200px;
-    margin: auto;
 }
 
-.value {
+.value-item {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
 }
 
-.value:hover {
+.value-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.value i {
+.value-item i {
     color: #4CAF50;
-    margin-bottom: 15px;
-    font-size: 3em;
-}
-
-.value h3 {
-    color: #4CAF50;
+    font-size: 2em;
     margin-bottom: 15px;
 }
 
-.value p {
+.value-item h3 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.value-item p {
     font-size: 1.1em;
-    line-height: 1.6;
     color: #333;
-}
-/* Thank You Message Section */
-.thank-you-message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 70vh; /* Full-height look */
-    background: linear-gradient(to right, #4CAF50, #FFA500); /* Gradient background */
-    color: white;
-    padding: 20px;
-}
-
-.thank-you-content {
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-    padding: 30px;
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
-}
-
-.thank-you-content h2 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-    color: white;
-}
-
-.thank-you-content span {
-    color: #FFA500; /* Highlighted orange text */
-    font-weight: bold;
-}
-
-.thank-you-content p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin: 10px 0;
-    color: white;
-}
-
-
-
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-    font-size: 1em;
-}
-
-footer .social-icons a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.5em;
-    transition: color 0.3s ease;
-}
-
-footer .social-icons a:hover {
-    color: #FFA500;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        display: none;
-        background: #4CAF50;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        padding: 10px 0;
-        z-index: 1000;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        z-index: 1100;
-        font-size: 24px;
-        color: white;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-        font-size: 1em;
-    }
-
-    .about-image img {
-        max-width: 80%;
-    }
-    .thank-you-content {
-        padding: 20px;
-    }
-
-    .thank-you-content h2 {
-        font-size: 2em;
-    }
-
-    .thank-you-content p {
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2.5em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
-
-    .hero .btn {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
-    .about h2 {
-        font-size: 2em;
-    }
-
-    .about-text {
-        font-size: 0.9em;
-    }
-
-    .about-image img {
-        max-width: 100%;
-    }
-    .thank-you-content h2 {
-        font-size: 1.8em;
-    }
-    
-}
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
